@@ -6,22 +6,24 @@ import {Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 const HeaderComponent = () => {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar style={{backgroundColor: '#E66767', color: 'black', textTransform: 'uppercase', padding: '15px', opacity: '.9'}}>
     <Navbar.Brand href="#">What to eat?</Navbar.Brand>
     <Nav className="mr-auto">
-      <Nav.Link href="/">Register</Nav.Link>
-        <NavDropdown title="Random meal!" id="collasible-nav-dropdown">
+      <NavDropdown title="Random meal!" id="collasible-nav-dropdown">
         <NavDropdown.Item href = "/breakfastRecipes" > Breakfast </NavDropdown.Item>
         <NavDropdown.Item href="/recipes">Dinner</NavDropdown.Item>
-        <NavDropdown.Item href="/savedRecipes">Your saved recipes</NavDropdown.Item>
         {/* <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item> */}
         <NavDropdown.Divider/>
         {/* <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
       </NavDropdown>
     </Nav>
     <Nav>
-      <Nav.Link href="/login">Login</Nav.Link>
-      <Nav.Link href="/login">Log Out</Nav.Link>
+      <NavDropdown title="Account info" id="collasible-nav-dropdown">
+        <NavDropdown.Item href = "/">Register</NavDropdown.Item>
+      <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+      <NavDropdown.Item href="/login">Log Out</NavDropdown.Item>
+      <NavDropdown.Item href="/savedRecipes">Saved recipes</NavDropdown.Item>
+    </NavDropdown> 
     </Nav>
   </Navbar>
 

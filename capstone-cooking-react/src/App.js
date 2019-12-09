@@ -26,11 +26,16 @@ function App() {
      <Switch>
        <Route exact path="/" component={ Register } />
        <Route exact path="/login" component={ Login } />
+       <Route exact path="/savedRecipes" component={ RecipeList } />
        <Route exact path="/recipes" render={(props) => <RecipeContainer {...props} mealRoute={'recipes'}/>} />
        <Route exact path="/breakfastRecipes" render={(props) => <RecipeContainer {...props} mealRoute={'breakfastRecipes'}/> }/>
        <Route component={My404} />
-       <Route exact path="/savedRecipes" component={ RecipeList } />
      </Switch>
+     </div>
+     <div>
+       <footer style={{textAlign: 'center', backgroundColor: '#E66767', padding: '10px', opacity: '.9'}}>
+         Website created by Brad Donakowski
+       </footer>
      </div>
    </main>
    

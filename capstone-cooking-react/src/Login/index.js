@@ -37,7 +37,7 @@ class Login extends Component {
     if (parsedResponse.status.code === 200) {
       console.log(parsedResponse)
       console.log('login successful');
-      this.props.history.push('/recipes'); // Change url to /dogs programmatically with react-router
+      this.props.history.push('/savedRecipes'); // Change url to /dogs programmatically with react-router
     } else {
       // Else display error message to the user
       this.setState({
@@ -48,12 +48,12 @@ class Login extends Component {
   render() {
     return (
     
-      <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+      <Grid textAlign='center' style={{ height: '100vh', backgroundImage: `url(${'https://i.imgur.com/b5tbtRJ.jpg'})`, backgroundSize: 'cover' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
-      <Header as='h2' color='blue' style={{fontSize: '2em', textTransform: 'uppercase'}} textAlign='center'>
-      Log-in
+      <Header as='h2' color='green' style={{fontSize: '4em', textTransform: 'uppercase', backgroundColor: 'white', opacity: '.65', borderRadius: '15px'}} textAlign='center'>
+      Login
       </Header>
-      <Form size='large' onSubmit={this.handleSubmit}>
+      <Form size='large' onSubmit={this.handleSubmit} style={{opacity: '.7'}}>
         <Segment stacked>
           <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' type="email" name="email" onChange={this.handleChange} required  />
           <Form.Input
@@ -64,13 +64,13 @@ class Login extends Component {
             type='password' name="password" onChange={this.handleChange} required
           />
 
-          <Button color='blue' fluid size='large'>
+          <Button color='green' fluid size='large'>
             Login
           </Button>
           { this.state.errorMsg ? <Message negative>{this.state.errorMsg}</Message> : null }
         </Segment>
       </Form>
-      <Message>
+      <Message style={{opacity: '.65'}}>
         New to us? <a href='/'>Sign Up</a>
       </Message>
     </Grid.Column>

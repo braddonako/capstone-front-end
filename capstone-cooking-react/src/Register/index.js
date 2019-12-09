@@ -33,7 +33,7 @@ class Register extends Component {
       localStorage.setItem('sessionId', parsedResponse.data.id);
       if (parsedResponse.status.code === 201) {
         console.log('Sign up successful');
-        this.props.history.push('/recipes');
+        this.props.history.push('/savedRecipes');
       } else {
         // Else display error message to the user
         this.setState({
@@ -43,12 +43,12 @@ class Register extends Component {
     }
     render() {
       return (
-        <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+        <Grid textAlign='center' style={{ height: '100vh', backgroundImage: `url(${'https://i.imgur.com/zqe8r4M.jpg'})`, backgroundSize: 'cover' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
-      <Header as='h2' color='blue' textAlign='center' style={{fontSize: '2em', textTransform: 'uppercase'}}>
+      <Header as='h2' color='red' textAlign='center' style={{fontSize: '3em', textTransform: 'uppercase', background: 'white', opacity: '.65', borderRadius: '15px'}}>
       Register here!
       </Header>
-      <Form size='large' onSubmit={this.handleSubmit}>
+      <Form size='large' onSubmit={this.handleSubmit} style={{opacity: '.7'}}>
         <Segment stacked>
           <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' type="email" name="email" onChange={this.handleChange} required />
           <Form.Input
@@ -59,13 +59,13 @@ class Register extends Component {
             type='password'
             name="password" onChange={this.handleChange} required 
           />
-          <Button color='blue' fluid size='large'>
+          <Button color='red' fluid size='large'>
             Register
           </Button>
            { this.state.errorMsg ? <Message negative>{this.state.errorMsg}</Message> : null }
         </Segment>
       </Form>
-      <Message>
+      <Message style={{opacity: '.7'}}>
         Already registered? <a href='/login'>Log-in</a>
       </Message>
     </Grid.Column>
