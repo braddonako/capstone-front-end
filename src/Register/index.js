@@ -34,6 +34,7 @@ class Register extends Component {
       if (parsedResponse.status.code === 201) {
         console.log('Sign up successful');
         this.props.history.push('/savedRecipes');
+        const refresh = window.location.reload(false);
       } else {
         // Else display error message to the user
         this.setState({
