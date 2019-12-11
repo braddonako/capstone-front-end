@@ -19,8 +19,8 @@ class Register extends Component {
     // Submission of register in form
     handleSubmit = async (e) => {
       e.preventDefault();
-      console.log(process.env.REACT_APP_API_URL)
-      const registrationUrl = `${process.env.REACT_APP_API_URL}/api/v1/user/register`; // localhost:8000/api/v1/user/register
+      console.log(process.env.REACT_APP_BACKEND_URL)
+      const registrationUrl = `${process.env.REACT_APP_BACKEND_URL}/api/v1/user/register`; // localhost:8000/api/v1/user/register
       const registerResponse = await fetch(registrationUrl, {
         method: 'POST',
         body: JSON.stringify(this.state),
