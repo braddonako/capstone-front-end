@@ -95,11 +95,7 @@ class RecipeContainer extends Component {
                     <Item.Description><strong>Instructions:</strong>{recipe.instructions}</Item.Description> 
                     <Item.Description style={{textAlign: 'center'}}><a target="blank" href={recipe.sourceUrl}>Click here to see the full recipe and ingredients</a></Item.Description>
                     </div>   
-                    <Button animated='fade'>
-                        <Button.Content visible type="Submit" Color="Blue" style={{margin: '15px'}} onClick={this.addSavedRecipe}>Bookmark Recipe</Button.Content>
-                        <Button.Content hidden>Recipe Bookmarked!!</Button.Content>
-                    </Button>
-                    {/* <Button type='Submit' color="blue" style={{margin: '15px'}} onClick={this.addSavedRecipe}>Bookmark recipe!</Button> */}
+                    <Button type='Submit' color="blue" style={{margin: '15px'}} onClick={this.addSavedRecipe}>Bookmark recipe!</Button>
                     <Button type='Submit' color="green" style={{margin: '15px'}} onClick={this.getRandomRecipe}>Try a different recipe!</Button>
                     </Item.Content>
                 </Item>
