@@ -72,7 +72,7 @@ class RecipeList extends React.Component {
     if (localStorage.getItem('sessionId')) {
     return(
      <Item.Group relaxed>
-       <h1 style={{textTransform: 'uppercase', textAlign: 'center', fontSize: '4em', fontFamily: 'TimesNewRoman'}}>Your saved Recipes!</h1>
+       <h1 style={{textTransform: 'uppercase', textAlign: 'center', fontSize: '4em', fontFamily: 'TimesNewRoman'}}>Your Bookmarked Recipes!</h1>
             <React.Fragment>
             { savedRecipes }
             </React.Fragment>

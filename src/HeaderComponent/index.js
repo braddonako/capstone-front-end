@@ -28,7 +28,7 @@ const HeaderComponent = () => {
       </NavDropdown>
     </Nav>
     <Nav style={{color: 'black'}}>
-      <NavDropdown.Item href="/savedRecipes">Saved recipes</NavDropdown.Item>
+      <NavDropdown.Item href="/savedRecipes">Bookmarked recipes</NavDropdown.Item>
       <NavDropdown.Item href="/login" onClick={handleLogOutSubmit}>Log Out</NavDropdown.Item> 
     </Nav>
   </Navbar>
