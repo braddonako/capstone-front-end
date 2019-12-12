@@ -25,3 +25,5 @@ pip3 freeze > requirements.txt
 I will be using an API called spoonacular that can generate random recipes.
 
 https://whattoeatrandomrecipe.herokuapp.com/
+
+![Imgur] (https://i.imgur.com/oi4FTtP.jpg)
