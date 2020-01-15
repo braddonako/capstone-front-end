@@ -34,7 +34,8 @@ const HeaderComponent = () => {
   </Navbar>
 
   )} else {
-    return(    <Navbar style={{backgroundColor: '#E66767', color: 'white', textTransform: 'uppercase', padding: '15px', opacity: '.9'}}>
+    return(    
+    <Navbar style={{backgroundColor: '#E66767', color: 'white', textTransform: 'uppercase', padding: '15px', opacity: '.9'}}>
     <Navbar.Brand href="#">What to eat?</Navbar.Brand>
     <Nav className="mr-auto">
       <NavDropdown title="IDK, you tell me!" id="collasible-nav-dropdown">
