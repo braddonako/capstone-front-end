@@ -24,8 +24,8 @@ function App() {
      }}>
      <HeaderComponent />
      <Switch>
-       <Route exact path="/" component={ Register } />
-       <Route exact path="/login" component={ Login } />
+       <Route exact path="/" component={ Login } />
+       <Route exact path="/login" component={ Register } />
        <Route exact path="/savedRecipes" component={ RecipeList } />
        <Route exact path="/recipes" render={(props) => <RecipeContainer {...props} mealRoute={'recipes'}/>} />
        <Route exact path="/breakfastRecipes" render={(props) => <RecipeContainer {...props} mealRoute={'breakfastRecipes'}/> }/>
