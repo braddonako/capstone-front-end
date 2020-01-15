@@ -79,7 +79,7 @@ class RecipeList extends React.Component {
     </Item.Group>
   )} else {
     return(
-      <h1 style={{textTransform: 'uppercase', textAlign: 'center', padding: '225px', fontSize: '4em', fontFamily: 'TimesNewRoman'}}>Thanks for stopping by!</h1>
+      <h1 style={{textTransform: 'uppercase', textAlign: 'center', fontSize: '4em', fontFamily: 'TimesNewRoman'}}>Thanks for stopping by!</h1>
     )
   }
 }

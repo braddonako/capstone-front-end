@@ -101,7 +101,7 @@ class RecipeContainer extends Component {
                 </Item>
                 </div>
         ) 
-    }else {
+    } else {
             return(
                  <div style={{padding: '40px', border: '5px solid #FFC1C1', backgroundImage: `url(${'https://i.imgur.com/dea6SWD.jpg'})`, backgroundSize: 'cover'}}>
                 <Item key={recipe} style={{flexDirection:'row', textAlign:'center'}} >
